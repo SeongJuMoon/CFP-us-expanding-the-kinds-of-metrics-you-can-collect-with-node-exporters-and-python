@@ -9,6 +9,9 @@ helm upgrade -i prometheus-stack prometheus-community/kube-prometheus-stack  \
 --set prometheus.service.port="80" \
 --set prometheus.prometheusSpec.scrapeInterval="15s" \
 --set prometheus.prometheusSpec.evaluationInterval="15s" \
---set prometheus-node-exporter.image="seongjumoon/node-exporter:v1.6.0-ubuntu20.04" \
+--set prometheus-node-exporter.image.registry="index.docker.io" \
+--set prometheus-node-exporter.image.repository="seongjumoon/node-exporter" \
+--set prometheus-node-exporter.image.tag="v1.6.0-ubuntu20.04" \
+--set prometheus-node-exporter.image.pullPolicy="IfNotPresent" \
 --namespace=monitoring \
 --create-namespace
