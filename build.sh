@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export TOOLCHAINS="go"
-export DOCKER_REPO="seongjumoon/node-exporter:v1.6.0-ubuntu20.04"
+export DOCKER_REPO="seongjumoon/node-exporter:v1.6.0-ubuntu2004.0"
 
 function utils:tool:installed {
 	command -v "$@" > /dev/null 2>&1
