@@ -9,7 +9,7 @@ FILENAME=list(filter(lambda f: f.endswith(".py"), __file__.split("/")))[0].split
 def _write_machine_info_required(registry, labelnames, labelset):
     g = Gauge('node_machine_info', "Node hardware info.", labelnames=labelnames, 
               registry=registry)
-    g.labels(**labelset).set(0)
+    g.labels(**labelset).set(1)
 
 
 def _write_prom_expfmt(filename=None, expfmt=None):
