@@ -16,8 +16,6 @@ helm upgrade -i prometheus-stack prometheus-community/kube-prometheus-stack  \
 --set prometheus-node-exporter.sidecarVolumeMount[0].name="collector-textfiles" \
 --set prometheus-node-exporter.sidecarVolumeMount[0].mountPath="/run/prometheus" \
 --set prometheus-node-exporter.sidecarVolumeMount[0].readOnly="false" \
---set prometheus-node-exporter.sidecarVolumeMount[0].readOnly="false" \
-
 --set prometheus-node-exporter.extraArgs[0]="--collector.textfile.directory=/run/prometheus" \
 --namespace=monitoring \
 --create-namespace
